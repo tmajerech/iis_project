@@ -67,6 +67,11 @@ class AuthServiceProvider extends ServiceProvider
             if($user->registered_tournaments->where('id', $post->id)->count() > 0){
                 return false;
             }
+
+            if($post->registered_users()->wherePivot('rozhodci', '1')->count() > 0 ){
+                return false;
+            }
+
             return true;
         });
         Gate::define('leave-tournament', function($user, $post){   
