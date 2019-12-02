@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
+
 class AuthServiceProvider extends ServiceProvider
 {
     /**
@@ -109,7 +110,8 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         Gate::define('edit-match', function($user, $tournament){   
-            if($user->id == $tournament->user->id || $user->administrator == 1 ){
+            if($user->id == $tournament->user->id || $user->administrator == 1  
+                || $tournament->registered_users()->withPivot('rozhodci', '=', '1' )->where('id', $user->id)->count() > 0){
                 return true;
             }
         });
