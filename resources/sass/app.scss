@@ -1,0 +1,118 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+
+body{
+    padding-bottom: 50px;
+}
+
+body.frontpage{
+    background-image: url(/img/BG.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    h1{
+        color: white;
+        font-weight: bold;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-size: 50px;
+        text-shadow: 1px 1px 15px black;
+
+        span{
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 70px;
+        }
+    }
+}
+
+
+nav{
+
+    margin-bottom: 50px;
+
+    .container{
+        align-items: center;
+        align-content: center;
+    }
+
+    img{
+        max-height: 52px;
+
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul{
+
+        display: flex;
+        margin-bottom: 0;
+
+        li{
+            list-style-type: none;
+
+
+
+            a{
+                padding: 15px 30px;
+                display: block;
+            }
+        }
+    }
+}
+
+.content-main{
+
+    img{
+        margin-bottom: 30px;
+    }
+
+    .index{
+
+        h1, h2, h3{
+            width: 100%;
+        }
+        .content{
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            >div {
+                padding: 20px;
+                width: calc(50% - 15px);
+                background-color: white;
+                box-shadow: 2px 2px 8px lightgray;
+                border-radius: 20px;
+                margin-bottom: 30px;
+            }
+        }
+
+        ul{
+            padding-left: 0;
+
+            li{
+                list-style-type: none;
+            }
+        }
+
+    }
+}
