@@ -66,6 +66,10 @@
                         @php
                         $ids_ucast = $user->registered_matches()->pluck('id')->toArray();
                         $ids = $user->registered_matches()->wherePivot('vyhra','=', 1)->pluck('id')->toArray();
+
+                        if($user->registered_matches()->wherePivot('rozhodci','=', 1)->where('id', $post->id)->count() > 0 ){
+                            continue;
+                        }
                         @endphp
 
                         <div class="ucastnik">
