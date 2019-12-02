@@ -45,7 +45,7 @@
             </span>
 
             {!! Form::close() !!}
-
+            <p><i>Všechna pole jsou povinná</i></p>
 
 
         </div>

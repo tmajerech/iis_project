@@ -49,7 +49,7 @@
                 <button type="submit">Odeslat</button>
 
             {!! Form::close() !!}
-
+            <p><i>Všechna pole jsou povinná</i></p>
 
 
         </div>

@@ -11356,6 +11356,19 @@ body {
   padding-bottom: 50px;
 }
 
+body h1,
+body h2,
+body h3,
+body h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+body .btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 body.frontpage {
   background-image: url(/img/BG.jpg);
   background-size: cover;
